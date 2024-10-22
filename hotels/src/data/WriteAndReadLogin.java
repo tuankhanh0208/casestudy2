@@ -32,8 +32,7 @@ public class WriteAndReadLogin {
         }
     }
 
-    // Phương thức đọc từ tệp CSV và trả về danh sách Login
-    public List<Login> readFromFile() {
+      public List<Login> readFromFile() {
         List<Login> loginList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(this.file))) {
             String line;

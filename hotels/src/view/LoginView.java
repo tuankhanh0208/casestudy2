@@ -48,10 +48,24 @@ public class LoginView {
 
     private void showAllLogin() {
         System.out.println("========== ĐĂNG NHẬP ===========");
-        System.out.println("Nhập tài khoản:");
-        String userName = sc.nextLine().toLowerCase();
-        System.out.println("Nhập mật khẩu:");
-        String passWord = sc.nextLine();
+
+        String userName;
+        do {
+            System.out.println("Nhập tài khoản:");
+            userName =sc.nextLine().toLowerCase();
+            if (userName.isEmpty()){
+                System.out.println("Tài khoản bắt buộc phải nhập.");
+            }
+        }while (userName.isEmpty());
+
+        String passWord;
+        do {
+            System.out.println("Nhập mật khẩu:");
+            passWord = sc.nextLine();
+            if (passWord.isEmpty()){
+                System.out.println("Vui lòng nhập mật khẩu.");
+            }
+        }while (passWord.isEmpty());
 
         // Kiểm tra thông tin đăng nhập
         if (!writeAndReadLogin.verifyLogin(userName, passWord)) {

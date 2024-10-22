@@ -4,17 +4,17 @@ import common.ExceptionHandler;
 import data.WriteAndReadLogin;
 
 public class MainView {
-//    private Scanner sc = new Scanner(System.in);
+    //    private Scanner sc = new Scanner(System.in);
 //    private Scanner scString = new Scanner(System.in);
     private RoomView roomView = new RoomView();
-    private BillView billView= new BillView();
+    private BillView billView = new BillView();
     int choice;
 
-    public void renderMenu(){
+    public void renderMenu() {
         mainMenu();
     }
 
-    public void mainMenu(){
+    public void mainMenu() {
         do {
             System.out.println("======SHOW HOTEL======");
             System.out.println("1.Quản lí phòng khách sạn");
@@ -39,15 +39,14 @@ public class MainView {
                 default:
                     System.out.println("Vui long nhap lai");
             }
-        } while (choice !=0);
+        } while (choice != 0);
     }
 
     private void showAllCurrent() {
         System.out.println("Danh sách tài khoản của bạn ");
         WriteAndReadLogin.showAllAccount();
+
     }
-
-
 
 
 }

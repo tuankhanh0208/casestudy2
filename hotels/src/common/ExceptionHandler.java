@@ -48,22 +48,22 @@ public class ExceptionHandler {
         }
         return date;
     }
-    public static void checkEmail(String email){
-        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
-        Pattern pattern = Pattern.compile(emailRegex);
-        Matcher matcher = pattern.matcher(email);
-//        while (true) {
-        try {
-            if (matcher.matches()) {
-                System.out.println("Email hợp lệ : " + email);
-            } else {
-                throw new IllegalArgumentException("Email không đúng định dạng");
-            }
-        } catch (IllegalArgumentException e) {
-            System.out.println("Lỗi nhập lại : " );
-        }
+//    public static void checkEmail(String email){
+//        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+//        Pattern pattern = Pattern.compile(emailRegex);
+//        Matcher matcher = pattern.matcher(email);
+////        while (true) {
+//        try {
+//            if (matcher.matches()) {
+//                System.out.println("Email hợp lệ : " + email);
+//            } else {
+//                throw new IllegalArgumentException("Email không đúng định dạng");
+//            }
+//        } catch (IllegalArgumentException e) {
+//            System.out.println("Lỗi nhập lại : " );
 //        }
-    }
+////        }
+//    }
     public static int CheckAge(){
         int value ;
         while (true){
