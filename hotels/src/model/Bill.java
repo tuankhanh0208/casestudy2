@@ -88,7 +88,7 @@ public class Bill {
                 ", employeeName='" + employeeName + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
-                ", totalPrice=" + totalPrice +
+                ", totalPrice=" + totalPrice + "VND"+
                 '}';
     }
 }
